@@ -12,8 +12,8 @@ public class Car : MonoBehaviour
     public Transform frontWheelDX, frontWheelSX;
     public Transform backWheelDX, backWheelSX;
 
-    public float steerAngle = 25.0f;
-    public float motorForce = 1500f;
+    public float steerAngle ;
+    public float motorForce ;
     public float steerAngl;
     float h, v;
 
@@ -65,8 +65,8 @@ public class Car : MonoBehaviour
 
     void UpdateWheelPos(WheelCollider col, Transform t)
     {
-        Vector3 pos = t.position;
-        Quaternion rot = t.rotation;
+        Vector3 pos;
+        Quaternion rot;
 
         col.GetWorldPose(out pos, out rot);
         t.position = pos;
