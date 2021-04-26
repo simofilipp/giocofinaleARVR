@@ -9,7 +9,7 @@ public class Fantasmino : MonoBehaviour
     [SerializeField] public float speed;
 
 
-    bool visto;
+    public bool visto;
     Vector3 posizioneIniziale;
     // Start is called before the first frame update
     void Start()
@@ -41,6 +41,7 @@ public class Fantasmino : MonoBehaviour
             Debug.Log("Visto");
             visto = true;
         }
+
     }
     private void OnTriggerExit(Collider other)
     {
@@ -56,7 +57,7 @@ public class Fantasmino : MonoBehaviour
     {
         if (collision.gameObject.name == nomeMacchina)
         {
-            collision.gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+            collision.gameObject.GetComponent<NewCarController>().life -= 15;
             Debug.Log("Danno");
             visto = false;
         }

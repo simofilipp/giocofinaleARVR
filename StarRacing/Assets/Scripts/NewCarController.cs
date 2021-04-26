@@ -18,6 +18,8 @@ public class NewCarController : MonoBehaviour
 
     public Transform leftFrontWheel, rightFrontWheel;
     public float maxWheelTurn = 25;
+    [Space] public float life;
+
 
     // Start is called before the first frame update
     void Start()
@@ -79,4 +81,12 @@ public class NewCarController : MonoBehaviour
         }
        
     }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.name == "alienFinale")
+    //    {
+    //        life -= 15;
+    //        other.GetComponent<Fantasmino>().visto = false;
+    //    }
+    //}
 }
