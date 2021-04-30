@@ -16,7 +16,6 @@ public class CannoneEsterno : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Spara", 0.5f, rateOfFire);
     }
 
     // Update is called once per frame
@@ -31,5 +30,22 @@ public class CannoneEsterno : MonoBehaviour
         GameObject colpo = Instantiate(palla, mirino.transform.position, mirino.transform.rotation);
         colpo.GetComponent<Rigidbody>().velocity = (mirino.transform.forward * speed);
         Destroy(colpo, 2);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Car")
+        {
+            InvokeRepeating("Spara", 0.5f, rateOfFire);
+        }
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "Car")
+        {
+            CancelInvoke("Spara");
+
+        }
+
     }
 }

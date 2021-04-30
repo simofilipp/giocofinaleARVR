@@ -10,6 +10,8 @@ public class Fantasmino : MonoBehaviour
 
 
     public bool visto;
+    public GameObject macchina;
+    public GameManager gm;
     Vector3 posizioneIniziale;
     // Start is called before the first frame update
     void Start()
@@ -57,9 +59,16 @@ public class Fantasmino : MonoBehaviour
     {
         if (collision.gameObject.name == nomeMacchina)
         {
-            collision.gameObject.GetComponent<NewCarController>().life -= 15;
+            macchina.GetComponent<NewCarController>().life -= 15;
             Debug.Log("Danno");
             visto = false;
+        }
+        if (collision.gameObject.name == "ColpoCannone")
+        {
+            GetComponent<Rigidbody>().AddForce(new Vector3(10,20,10)*10, ForceMode.Impulse);
+            gm.AccendiImageKill();
+            gm.RimuoviAlieno(this.gameObject);
+            Destroy(this.gameObject, 2);
         }
     }
 }

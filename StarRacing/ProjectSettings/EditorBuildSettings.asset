@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ScenaProve/Pista1/Scena1.unity
     guid: e64027769d529214e9653275e1be0a3f
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: a7876f6d1c6fe8f4dbadf19b26e319bc
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 8899b70d3b8c32f4aa32cedba62da230
   m_configObjects: {}

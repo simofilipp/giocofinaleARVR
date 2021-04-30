@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6948559640500888430}
   - component: {fileID: 3535602581116078983}
   - component: {fileID: 2123006519865872828}
-  - component: {fileID: -4765868585196526197}
   m_Layer: 0
   m_Name: PallaCannone
   m_TagString: Untagged
@@ -30,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4825913783745613583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -112.89776, y: -4.221389, z: 653.94006}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 4.4128695, y: 4.4128695, z: 4.4128695}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -113,15 +112,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-4765868585196526197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4825913783745613583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d91e7c051fd11da48b3191188dc5aab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
